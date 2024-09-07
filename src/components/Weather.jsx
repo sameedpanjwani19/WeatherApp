@@ -36,7 +36,7 @@ const Weather = () => {
       return;
     }
     try {
-      const url = `http://api.weatherapi.com/v1/current.json?key=70bbcece4d9c4a81b1e102148240709&q=${city}`;
+      const url = `https://api.weatherapi.com/v1/current.json?key=70bbcece4d9c4a81b1e102148240709&q=${city}`;
       const response = await fetch(url);
       const data = await response.json();
       const icons = allIcons[data.current.condition.text] || clear_icon;
